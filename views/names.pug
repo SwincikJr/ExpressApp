@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Just Hello!
+    ul
+        each pessoa in pessoas
+            - var evento = "alert('" + pessoa._id + "')"
+            - var estilo = "margin:50px"
+            li(onclick=evento style=estilo) Nome: #{pessoa.Nome}, Idade: #{pessoa.Idade}
+    a(href='http://root') Back Home!
